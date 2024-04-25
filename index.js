@@ -1,25 +1,20 @@
-System.register(["./application.js"], function (_export, _context) {
-  "use strict";
+System.register("chunks:///_virtual/internal",[],(function(){return{execute:function(){}}}));
 
-  var Application, application;
+(function(r) {
+  r('virtual:///prerequisite-imports/internal', 'chunks:///_virtual/internal'); 
+})(function(mid, cid) {
+    System.register(mid, [cid], function (_export, _context) {
+    return {
+        setters: [function(_m) {
+            var _exportObj = {};
 
-  function topLevelImport(url) {
-    return System["import"](url);
-  }
-
-  return {
-    setters: [function (_applicationJs) {
-      Application = _applicationJs.Application;
-    }],
-    execute: function () {
-      application = new Application();
-      topLevelImport('cc').then(function (engine) {
-        return application.init(engine);
-      }).then(function () {
-        return application.start();
-      })["catch"](function (err) {
-        console.error(err);
-      });
-    }
-  };
+            for (var _key in _m) {
+              if (_key !== "default" && _key !== "__esModule") _exportObj[_key] = _m[_key];
+            }
+      
+            _export(_exportObj);
+        }],
+        execute: function () { }
+    };
+    });
 });
